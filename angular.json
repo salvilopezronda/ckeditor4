@@ -96,12 +96,22 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets/ckeditor",
+                "output": "/assets/ckeditor"
+              }
             ],
             "styles": [
+              "node_modules/ckeditor4/ckeditor.css",
+              "node_modules/mathjax/MathJax.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/ckeditor4/ckeditor.js",
+              "node_modules/mathjax/MathJax.js?config=TeX-AMS_HTML"
+            ]
           }
         }
       }
